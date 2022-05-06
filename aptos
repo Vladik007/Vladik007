@@ -1,0 +1,6 @@
+How to set up aptos node
+screen -S aptos
+wget -q -O aptos_update.sh https://api.nodes.guru/aptos_update.sh && chmod +x aptos_update.sh && sudo /bin/bash aptos_update.sh 
+wait
+how to check?
+curl 127.0.0.1:9101/metrics 2> /dev/null | grep aptos_state_sync_version | grep storage_synchronizer_operation
